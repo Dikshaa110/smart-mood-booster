@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Mood Booster</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌈 Smart Mood Booster</h1>
+        <h3>{{ greeting }}</h3>
+
+        <form method="POST">
+            <select name="mood" required>
+                <option value="">How are you feeling?</option>
+                <option value="happy">😊 Happy</option>
+                <option value="sad">😔 Sad</option>
+                <option value="motivated">🔥 Motivated</option>
+                <option value="stressed">😣 Stressed</option>
+            </select>
+
+            <button type="submit">Boost My Mood</button>
+        </form>
+
+        {% if quote %}
+        <div class="quote-box">
+            <p>{{ quote }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
